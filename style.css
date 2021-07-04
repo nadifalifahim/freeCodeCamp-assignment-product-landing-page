@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --background-color: #eee;
+    --pricing-head-color: rgb(214, 214, 214);
+    --cta-color: #f1c40f;
+    --icon-color: rgb(255, 145, 0);
+}
+
+.anchor {
+    display: block;
+    height: 100px;
+    margin-top: -50px;
+    visibility: hidden;
+}
+
+body{
+    background-color: var(--background-color);
+    width: 100%;
+}
+
+header{
+    padding: 15px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    z-index: 999;
+}
+
+#head-img{
+    min-width: 30%;
+    display: flex;
+}
+
+#header-img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#nav-bar{
+    min-width: 40%;
+}
+
+#nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-link > a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    font-weight: 700;
+    font-size: 24px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#email{
+    display: block;
+    width: 250px;
+    height: 25px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+    border-radius: 1px;
+}
+
+#submit{
+    background-color: var(--cta-color);
+    border: none;
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#features-container{
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    padding-right: 10px;
+    max-width: 950px;
+}
+.features{
+    display: flex;
+    align-items: center;
+}
+.icons{
+    color: var(--icon-color);
+    font-size: 60px !important;
+    padding: 40px 40px;
+}
+
+#battery-icon{
+    transform: rotate(90deg);
+}
+
+.feature-details{
+    padding-left: 20px;
+}
+
+.feature-title{
+    font-size: 24px;
+}
+
+#how-it-works-container{
+    width: 100%;
+}
+
+#video{
+    width: 100%;
+    max-width: 560px;
+    display: block;
+    margin: 10px auto;
+}
+
+#pricing-container{
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.pricing-element{
+    margin: 10px;
+    border: black 1px solid;
+    border-radius: 2px;
+    min-width: 300px;
+    height: 320px;
+    /* background-color: red; */
+}
+
+.pricing-header{
+    background-color: var(--pricing-head-color);
+    height: 20%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-details{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.pricing-features{
+    line-height: 2em;
+}
+
+.pricing-button{
+    background-color: var(--cta-color);
+    border: none;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+footer{
+    background-color: var(--pricing-head-color);
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+    min-height: 80px;
+    padding: 0 50px;
+}
+
+#footer-links-container{
+    display: flex;
+
+}
+
+#footer-links-container > li{
+    list-style: none;
+}
+
+.footer-links{
+    text-decoration: none;
+    color: inherit;
+    padding: 0 0 0 20px;
+}
+
+#copyright-text{
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #444;
+}
+
+.pricing-button, #submit{
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+
+.pricing-button:hover, #submit:hover{
+    background-color: var(--icon-color);
+}
+
+@media (max-width: 600px){
+    header{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #nav-list{
+        flex-direction: column;
+        padding-top: 10px;
+
+    }
+    .nav-link > a{
+        padding: 2px 0;
+    }
+    .features{
+        flex-direction: column;
+        text-align: center;
+    }
+    #pricing-container{
+       flex-direction: column;
+    }
+}
